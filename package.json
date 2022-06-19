@@ -4,8 +4,10 @@
   "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "compile-sass-dev": "node-sass ./scss/main.scss ./css/styles.css -w",
-    "compile-sass": "node-sass ./scss/main.scss ./css/styles.css"
+    "compile:sass:dev": "node-sass ./scss/main.scss ./css/styles.css -w",
+    "compile:sass": "node-sass ./scss/main.scss ./css/styles.css",
+    "start": "compile-sass"
+    
   },
   "keywords": [],
   "author": "",
