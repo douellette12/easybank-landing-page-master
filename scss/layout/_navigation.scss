@@ -1,0 +1,130 @@
+.navigation {
+    position: relative;
+    height: 8rem;
+    padding: 2.5rem;
+    background-color: white;
+    z-index: 1;
+    overflow-y: initial;
+    &__checkbox {
+        display: none;
+    }
+    &__button {
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        cursor: pointer;
+    }
+    &__nav { 
+        display: none;
+
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+    &__link {
+        color: $grayish-blue;
+        &:hover {
+            color: $dark-blue;
+            height: 100%;
+            padding-bottom: 2.6rem;
+            border-bottom: 4px solid $lime-green;
+        }
+    }
+    &__invite {
+        display: none;
+    }
+    &__list {
+        display: block;
+        margin: 3rem;
+        background-color: white;
+        padding: 3rem;
+        width: 85%;
+        text-align: center;
+        border-radius: 5px;
+        @include respond(sm) {
+            width: 90%;
+        }
+        @include respond(md) {
+            width: 92%;
+        }
+    }
+    &__checkbox:checked ~ &__nav {
+        display: block;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 8rem;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow-y: auto;
+        //background-color: rgb(0,0,0); /* Fallback color */
+        background: linear-gradient(rgba($dark-blue, .9), rgba(white, .5)); 
+    }
+}
+@include respond(md){
+    .navigation {
+        z-index: 1;
+    }
+}
+
+@include respond(lg){
+    .navigation {
+        display: flex;
+        align-items: center;
+        padding: 0 10rem;
+        &__button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+        &__nav { 
+            display: flex;
+            position: static;
+            background-color: white;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            border-radius: 3px;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            width: 100%;
+            text-align: left;
+            border-radius: 0;
+            position: static;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 0;
+                margin-right: 4rem;
+            }
+        }
+        &__link {
+            color: $grayish-blue;
+        }
+        &__invite {
+            display: block;
+            background: linear-gradient(to right, $lime-green, $bright-cyan);
+            border-radius: 2rem;
+            color: white;
+            font-family: Public Sans, sans-serif;
+            font-weight: 700;
+            text-align: center;
+            width: 20rem;
+            padding: 1rem 0;
+            font-size: 1.4rem;
+        }
+        &__checkbox:checked ~ &__nav {
+            display: flex;
+            position: static;
+            z-index: 0;
+            background: white;
+        }
+    }
+}

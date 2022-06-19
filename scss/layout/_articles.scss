@@ -1,0 +1,72 @@
+.articles {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: $very-light-gray;
+    @include respond(sm) {
+        padding: 6rem 10rem;
+    }
+    @include respond(md) {
+        text-align: left;
+        padding: 6rem 15rem;
+    }
+    @include respond(lg) {
+        text-align: left;
+        padding: 6rem 5rem;
+    }
+    @include respond(xl) {
+        padding: 6rem 10rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        @include respond(lg) {
+            flex-direction: row;
+        }
+    }
+    &__title {
+        margin-bottom: 4rem;
+    }
+    &__article-text {
+        padding: 2rem 2.5rem;
+    }
+    &__card {
+        background-color: white;
+        text-align: left;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+            @include respond(lg) {
+                margin-bottom: 0;
+                margin-right: 3rem;
+            }
+        }
+        &-image {
+            background-position: top;
+            background-size: cover;
+            border-radius: 5px 5px 0 0;
+            height: 21rem;
+            &--currency{
+                background-image: url('../../images/image-currency.jpg');
+            }
+            &--restaurant {
+                background-image: url('../../images/image-restaurant.jpg');
+            }
+            &--plane {
+                background-image: url('../../images/image-plane.jpg');
+            }
+            &--confetti {
+                background-image: url('../../images/image-confetti.jpg');
+            }
+        }
+    }
+    &__author {
+        font-size: .9rem;
+        padding-bottom: 1.5rem;
+    }
+    &__heading {
+        padding-bottom: 1.5rem;
+    }
+    &__summary {
+        line-height: 1.8rem;
+    }
+}

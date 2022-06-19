@@ -1,0 +1,42 @@
+.features {
+    background-color: $light-grayish-blue;
+    text-align: center;
+    padding: 6rem 2rem;
+    @include respond(md) {
+        padding: 6rem 15rem;
+    }
+    @include respond(lg) {
+        text-align: left;
+        padding: 6rem 10rem;
+    }
+    &__title {
+        font-size: 3.5rem;
+    }
+    &__tagline {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+        @include respond(lg) {
+            width: 45%;
+            margin-bottom: 10rem;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include respond(lg) {
+            flex-direction: row;
+        }
+    }
+    &__block {
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+            @include respond(lg) {
+                margin-right: 4rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__feature {
+        padding: 2rem 0;
+    }
+}

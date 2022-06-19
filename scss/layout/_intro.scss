@@ -1,0 +1,107 @@
+.dimmed {
+    background: linear-gradient($dark-blue, $grayish-blue);
+    opacity: .5;
+}
+
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10rem;
+    background-color: $very-light-gray;
+    &__mockups {
+        position: absolute;
+        width: 100%;
+        top: -13.5rem;
+        z-index: 0;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__text{
+        order: 2;
+        width: 100%;
+        margin-top: -4rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    &__title {
+        font-size: 3.5rem;
+        font-weight: 200;
+        margin-bottom: 2rem;
+    }
+    &__tagline {
+        padding-right: 0;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@include respond(md) {
+    .intro {
+        position: relative;
+
+        &__mockups {
+            width: 80%;
+            top: -25rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__text {
+            margin-top: -15rem;
+            padding-right: 10rem;
+            padding-left: 10rem;
+        }
+    }
+}
+@include respond(lg) {
+    .intro {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 50rem;
+        padding-bottom: 0;
+        @include respond(xl) {
+            height: 65rem;
+        }
+        &__img {
+            position: absolute;
+            top: -22rem;
+            right: -25rem;
+            z-index: 0;
+            width: 75%;
+            display: block;
+        }
+        &__mockups {
+            width: 50%;
+            top: -13rem;
+            left: auto;
+            right: -10rem;
+            transform: none;
+        }
+        &__text{
+            width: 50%;
+            padding: 0 6.5rem;
+            margin-top: 0;
+            text-align: left;
+            @include respond(xl) {
+                padding: 0 12rem;
+            }
+        }
+        &__title {
+            font-size: 5rem;
+            font-weight: 200;
+            margin-bottom: 2rem;
+        }
+        &__tagline {
+            padding-right: 10rem;
+            margin-bottom: 3rem;
+        }
+    }
+    .request {
+        display: inline;
+    }
+}
