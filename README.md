@@ -40,5 +40,5 @@ Users should be able to:
 
 ### Continued development
 
--Javascript Frameworks like React and Angular
--Backend Technologies such as .NET Core 
+- Javascript Frameworks like React and Angular
+- Backend Technologies such as .NET Core 
