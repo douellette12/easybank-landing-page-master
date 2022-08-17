@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: []
+- Live Site URL: [https://douellette12.github.io/easybank-landing-page-master/]
 
 ## My process
 
